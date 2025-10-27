@@ -1,11 +1,16 @@
 extends CharacterBody2D 
 class_name CharacterMovement
 
+@export var character_pos : CharacterPos
+
 @export var speed : float
 
 var direction : Vector2 = Vector2(0,0)
 
-func _physics_process(delta: float) -> void:
+func _ready():
+	character_pos.player_node = self
+
+func _physics_process(_delta: float) -> void:
 
 	direction = Vector2.ZERO 
 

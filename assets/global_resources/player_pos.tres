@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CharacterPos" load_steps=2 format=3 uid="uid://caq34i3pyskbr"]
+
+[ext_resource type="Script" uid="uid://cwpjk0itxcdbx" path="res://objects/player/body/character_pos.gd" id="1_8ct1x"]
+
+[resource]
+script = ExtResource("1_8ct1x")
+metadata/_custom_type_script = "uid://cwpjk0itxcdbx"

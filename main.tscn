@@ -1,9 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqhnx4c8jo6ke"]
+[gd_scene load_steps=6 format=3 uid="uid://bqhnx4c8jo6ke"]
 
 [ext_resource type="PackedScene" uid="uid://2isitvwkdo0m" path="res://assets/prefabs/character.tscn" id="1_ig7tw"]
+[ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/global_resources/player_pos.tres" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://ddltrfdxsr01x" path="res://icon.svg" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://bpk15taasrsye" path="res://objects/enemy/enemy.gd" id="4_1bvp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(126, 126)
 
 [node name="Node2D" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-510.0, -478.0, -416.0]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_ig7tw")]
+character_pos = ExtResource("2_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Enemy" type="Area2D" parent="."]
+position = Vector2(-290, -158)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("4_1bvp3")
+character_pos = ExtResource("2_0xm2m")
+metadata/_custom_type_script = "uid://bpk15taasrsye"
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+modulate = Color(1, 0, 1, 1)
+texture = ExtResource("3_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("RectangleShape2D_1bvp3")
