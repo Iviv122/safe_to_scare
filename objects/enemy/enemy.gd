@@ -3,7 +3,7 @@ class_name Enemy
 
 @export var character_pos : CharacterPos
 @export var health : float = 8
-@export var speed : float = 115
+@export var speed : float = 515
 
 signal damaged
 

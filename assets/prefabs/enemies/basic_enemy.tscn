@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuh7dwoljcti3"]
+
+[ext_resource type="Script" uid="uid://bpk15taasrsye" path="res://objects/enemy/enemy.gd" id="1_xppan"]
+[ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/global_resources/player_pos.tres" id="2_631gd"]
+[ext_resource type="Texture2D" uid="uid://ddltrfdxsr01x" path="res://icon.svg" id="3_5gwru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(126, 126)
+
+[node name="Enemy" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_xppan")
+character_pos = ExtResource("2_631gd")
+metadata/_custom_type_script = "uid://bpk15taasrsye"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+texture = ExtResource("3_5gwru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1bvp3")
