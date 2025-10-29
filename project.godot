@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 PlayerStatsInstance="*res://assets/globals/player_stats_instance.tscn"
+InventoryInstance="*res://assets/globals/inventory_instance.tscn"
 
 [display]
 

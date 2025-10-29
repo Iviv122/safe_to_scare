@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvu8namiqea5i"]
+
+[ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="1_ax5wk"]
+[ext_resource type="Script" uid="uid://c2l4xlhs72rft" path="res://objects/projectiles/player/simple_player_bullet.gd" id="1_lu20l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ax5wk"]
+radius = 19.026299
+
+[node name="PlayerBullet" type="Sprite2D"]
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_ax5wk")
+script = ExtResource("1_lu20l")
+radius = 19.0
+speed = 15.0
+damage_modifier = 1.0
+metadata/_custom_type_script = "uid://c2l4xlhs72rft"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+top_level = true
+shape = SubResource("CircleShape2D_ax5wk")

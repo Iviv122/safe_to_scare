@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://cjtshx4eqbmxg"]
+
+[ext_resource type="Script" uid="uid://bvrf2rrxafb6m" path="res://objects/weapons/weapon.gd" id="1_r6yop"]
+[ext_resource type="PackedScene" uid="uid://dvu8namiqea5i" path="res://assets/prefabs/projectiles/PlayerBullet.tscn" id="1_xh3f6"]
+
+[resource]
+script = ExtResource("1_r6yop")
+projectile = ExtResource("1_xh3f6")
+metadata/_custom_type_script = "uid://bvrf2rrxafb6m"
