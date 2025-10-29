@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqhnx4c8jo6ke"]
+[gd_scene load_steps=8 format=3 uid="uid://bqhnx4c8jo6ke"]
 
 [ext_resource type="PackedScene" uid="uid://2isitvwkdo0m" path="res://assets/prefabs/character.tscn" id="1_ig7tw"]
 [ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/globals/player_pos.tres" id="2_0xm2m"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cuh7dwoljcti3" path="res://assets/prefabs/enemies/basic_enemy.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://b1gu8n3r8qmq1" path="res://objects/enemy/enemy_spawner.gd" id="5_7mycd"]
 [ext_resource type="Resource" uid="uid://b4dxrcn26x7p6" path="res://assets/lists/enemylist.tres" id="6_272bh"]
+[ext_resource type="Texture2D" uid="uid://cw184a7800ha6" path="res://raw_assets/sprites/Square.png" id="7_272bh"]
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-510.0, -478.0, -416.0]
@@ -14,14 +15,23 @@ metadata/_edit_horizontal_guides_ = [-510.0, -478.0, -416.0]
 character_pos = ExtResource("2_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
 
 [node name="PlayerUi" parent="." instance=ExtResource("3_h2yge")]
 
 [node name="Enemy" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(-528.00006, -52)
+position = Vector2(-90, -74)
 
 [node name="EnemySpawner" type="Node2D" parent="."]
 position = Vector2(1, 0)
 script = ExtResource("5_7mycd")
 enemy_list = ExtResource("6_272bh")
 metadata/_custom_type_script = "uid://b1gu8n3r8qmq1"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.27387273, 0.27387273, 0.27387273, 1)
+
+[node name="BcakGround" type="Sprite2D" parent="."]
+z_index = -5
+scale = Vector2(6, 6)
+texture = ExtResource("7_272bh")

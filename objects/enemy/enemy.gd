@@ -1,17 +1,24 @@
 extends Area2D 
 class_name Enemy
 
+@export var collision_shape : CollisionPolygon2D 
 @export var character_pos : PlayerNode
+
 @export var health : float = 8
-@export var speed : float = 515 
+@export var speed : float = 250
 
 @export var contact_damage : float = 1 
 
 signal damaged
 
+@export var occluder : LightOccluder2D
+
 func _ready() -> void:
 	on_spawn()
 	body_entered.connect(entered)
+
+	var oc = OccluderPolygon2D.new()
+	oc.polygon = collision_shape.polygon
 
 func on_spawn() -> void:
 	pass

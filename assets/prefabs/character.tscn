@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://2isitvwkdo0m"]
+[gd_scene load_steps=7 format=3 uid="uid://2isitvwkdo0m"]
 
 [ext_resource type="Script" uid="uid://bv1cw1etcheas" path="res://objects/player/body/character_movement.gd" id="1_hv81v"]
-[ext_resource type="Texture2D" uid="uid://ddltrfdxsr01x" path="res://icon.svg" id="2_2y7e2"]
+[ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="2_o8o60"]
+[ext_resource type="Script" uid="uid://dreu4tk4en3i5" path="res://objects/player/body/blicking_light.gd" id="3_jj5up"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
 radius = 60.74537
+
+[sub_resource type="Gradient" id="Gradient_b5nef"]
+offsets = PackedFloat32Array(0, 0.13333334, 0.64666665)
+colors = PackedColorArray(1, 1, 1, 1, 0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jj5up"]
+gradient = SubResource("Gradient_b5nef")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
@@ -12,8 +24,21 @@ script = ExtResource("1_hv81v")
 speed = 900.0
 metadata/_custom_type_script = "uid://bv1cw1etcheas"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_2y7e2")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(2, 2)
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.8)
+texture = SubResource("GradientTexture2D_jj5up")
+texture_scale = 1.5
+script = ExtResource("3_jj5up")
+speed = 0.5
+magnitude = 0.1
+metadata/_custom_type_script = "uid://dreu4tk4en3i5"
+
+[node name="Sprite2D" type="Sprite2D" parent="PointLight2D"]
+modulate = Color(0, 1, 1, 1)
+scale = Vector2(0.07812501, 0.078125)
+texture = ExtResource("2_o8o60")

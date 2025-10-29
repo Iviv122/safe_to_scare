@@ -6,7 +6,6 @@ var health : float = 3
 signal updated() 
 signal died()
 
-
 func deal_damage(a : float) -> void:
     health -= a
 
