@@ -8,8 +8,8 @@
 radius = 60.74537
 
 [sub_resource type="Gradient" id="Gradient_b5nef"]
-offsets = PackedFloat32Array(0, 0.006666667, 0.64666665)
-colors = PackedColorArray(1, 1, 1, 1, 0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.64666665)
+colors = PackedColorArray(0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_jj5up"]
 gradient = SubResource("Gradient_b5nef")
@@ -21,7 +21,6 @@ fill_from = Vector2(0.5, 0.5)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_hv81v")
-speed = 900.0
 metadata/_custom_type_script = "uid://bv1cw1etcheas"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

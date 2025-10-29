@@ -3,8 +3,6 @@ class_name CharacterMovement
 
 @export var character_pos : PlayerNode
 
-@export var speed : float
-
 var direction : Vector2 = Vector2(0,0)
 
 func _ready():
@@ -24,9 +22,10 @@ func _physics_process(_delta: float) -> void:
 		direction.x -=1
 
 	if direction:
-		velocity = direction.normalized() * speed 
+		# deacc
+		velocity = velocity.move_toward(direction.normalized() * PlayerStatsInstance.speed,PlayerStatsInstance.speed/2)
 	else:
-
-		velocity = velocity.move_toward(Vector2.ZERO,speed)
+		# deacc
+		velocity = velocity.move_toward(velocity/2,PlayerStatsInstance.speed/5)
 
 	move_and_slide()

@@ -2,6 +2,7 @@ extends Node
 class_name PlayerStats
 
 var health : float = 3 
+var speed : float = 450 
 
 signal updated() 
 signal died()

@@ -1,16 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cuh7dwoljcti3"]
+[gd_scene load_steps=8 format=3 uid="uid://cuh7dwoljcti3"]
 
 [ext_resource type="Script" uid="uid://bpk15taasrsye" path="res://objects/enemy/enemy.gd" id="1_xppan"]
 [ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/globals/player_pos.tres" id="2_631gd"]
 [ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="3_xppan"]
-[ext_resource type="Script" uid="uid://dreu4tk4en3i5" path="res://objects/player/body/blicking_light.gd" id="4_631gd"]
 [ext_resource type="Script" uid="uid://v5sl8sb7nw0m" path="res://objects/circle_ocluder.gd" id="5_5gwru"]
 
 [sub_resource type="Gradient" id="Gradient_b5nef"]
-offsets = PackedFloat32Array(0, 0.006666667, 0.64666665)
-colors = PackedColorArray(1, 1, 1, 1, 0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.64666665)
+colors = PackedColorArray(0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_5gwru"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jj5up"]
 gradient = SubResource("Gradient_b5nef")
 width = 256
 height = 256
@@ -20,12 +19,11 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_631gd"]
 cull_mode = 1
 
-[node name="Enemy" type="Area2D" node_paths=PackedStringArray("collision_shape", "occluder")]
+[node name="Enemy" type="Area2D" node_paths=PackedStringArray("collision_shape")]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_xppan")
 collision_shape = NodePath("CollisionPolygon2D")
 character_pos = ExtResource("2_631gd")
-occluder = NodePath("")
 metadata/_custom_type_script = "uid://bpk15taasrsye"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -33,14 +31,12 @@ polygon = PackedVector2Array(0, -64, 43.333332, -43.333332, 64, 0, 43.333, 43.33
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(1.0666646, 1.0666646)
+energy = 2.0
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.8)
 shadow_item_cull_mask = 2
-texture = SubResource("GradientTexture2D_5gwru")
+texture = SubResource("GradientTexture2D_jj5up")
 texture_scale = 0.52
-script = ExtResource("4_631gd")
-magnitude = 0.02
-metadata/_custom_type_script = "uid://dreu4tk4en3i5"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(0.3764706, 0.30980393, 1, 1)
