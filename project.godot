@@ -21,6 +21,7 @@ PlayerStatsInstance="*res://assets/globals/player_stats_instance.tscn"
 
 [display]
 
+window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="viewport"
 
