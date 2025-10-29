@@ -1,9 +1,11 @@
 extends Area2D 
 class_name Enemy
 
-@export var character_pos : CharacterPos
+@export var character_pos : PlayerNode
 @export var health : float = 8
-@export var speed : float = 515
+@export var speed : float = 515 
+
+@export var contact_damage : float = 1 
 
 signal damaged
 
@@ -18,7 +20,8 @@ func entered(other : Node2D) -> void:
 	if other is CharacterMovement:
 		player_contact() 
 
-func player_contact() -> void:
+func player_contact() -> void:	
+	PlayerStatsInstance.deal_damage(contact_damage)
 	queue_free()
 
 func damage(a : float) -> void:

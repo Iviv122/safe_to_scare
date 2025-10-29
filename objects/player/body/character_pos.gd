@@ -1,4 +1,4 @@
 extends Resource
-class_name CharacterPos
+class_name PlayerNode
 
-var player_node : Node2D 
+var player_node : CharacterMovement 

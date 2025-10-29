@@ -15,6 +15,10 @@ run/main_scene="uid://bqhnx4c8jo6ke"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerStatsInstance="*res://assets/globals/player_stats_instance.tscn"
+
 [display]
 
 window/size/resizable=false

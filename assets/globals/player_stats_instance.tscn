@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://pnlelueuxqm1"]
+
+[ext_resource type="Script" uid="uid://crojw5x2ywmmf" path="res://objects/player/stats/player_stats.gd" id="1_81xwb"]
+
+[node name="PlayerStatsInstance" type="Node"]
+script = ExtResource("1_81xwb")
+metadata/_custom_type_script = "uid://crojw5x2ywmmf"

@@ -1,7 +1,7 @@
 extends CharacterBody2D 
 class_name CharacterMovement
 
-@export var character_pos : CharacterPos
+@export var character_pos : PlayerNode
 
 @export var speed : float
 

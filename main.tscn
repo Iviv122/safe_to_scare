@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqhnx4c8jo6ke"]
+[gd_scene load_steps=5 format=3 uid="uid://bqhnx4c8jo6ke"]
 
 [ext_resource type="PackedScene" uid="uid://2isitvwkdo0m" path="res://assets/prefabs/character.tscn" id="1_ig7tw"]
-[ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/global_resources/player_pos.tres" id="2_0xm2m"]
+[ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/globals/player_pos.tres" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cuf6ygvr2uxvy" path="res://assets/prefabs/player_ui.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cuh7dwoljcti3" path="res://assets/prefabs/enemies/basic_enemy.tscn" id="4_1bvp3"]
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-510.0, -478.0, -416.0]
@@ -10,3 +12,8 @@ metadata/_edit_horizontal_guides_ = [-510.0, -478.0, -416.0]
 character_pos = ExtResource("2_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PlayerUi" parent="." instance=ExtResource("3_h2yge")]
+
+[node name="Enemy" parent="." instance=ExtResource("4_1bvp3")]
+position = Vector2(-528.00006, -52)

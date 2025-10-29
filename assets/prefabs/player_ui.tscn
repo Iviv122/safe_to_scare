@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuf6ygvr2uxvy"]
+
+[ext_resource type="Script" uid="uid://eungeq374kpr" path="res://objects/player/ui/health_bar.gd" id="1_fdptt"]
+
+[node name="PlayerUi" type="CanvasLayer"]
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 20.0
+grow_horizontal = 0
+script = ExtResource("1_fdptt")
+metadata/_custom_type_script = "uid://eungeq374kpr"
