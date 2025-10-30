@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://ck4nys37e6wca"]
 
 [ext_resource type="Script" uid="uid://daygoe25gqhhq" path="res://objects/player/stats/player_inventory.gd" id="1_61k8r"]
-[ext_resource type="Resource" uid="uid://cjtshx4eqbmxg" path="res://assets/weapons/pistol.tres" id="2_tbdtr"]
+[ext_resource type="Resource" uid="uid://c3jf3etdvvtiq" path="res://assets/weapons/shotgun.tres" id="2_uib4w"]
 [ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/globals/player_pos.tres" id="3_uib4w"]
 
 [node name="InventoryInstance" type="Node"]
 script = ExtResource("1_61k8r")
-weapon = ExtResource("2_tbdtr")
+weapon = ExtResource("2_uib4w")
 player_node = ExtResource("3_uib4w")
 metadata/_custom_type_script = "uid://daygoe25gqhhq"

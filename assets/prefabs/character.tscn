@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dreu4tk4en3i5" path="res://objects/player/body/blicking_light.gd" id="3_jj5up"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
-radius = 60.74537
+radius = 38.470768
 
 [sub_resource type="Gradient" id="Gradient_b5nef"]
 offsets = PackedFloat32Array(0, 0.64666665)
