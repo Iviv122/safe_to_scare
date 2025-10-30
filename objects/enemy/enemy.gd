@@ -8,6 +8,7 @@ class_name Enemy
 @export var speed : float = 250
 
 @export var contact_damage : float = 1 
+@export var exp_death : float = 1
 
 signal damaged
 
@@ -43,4 +44,5 @@ func _process(delta):
 	global_position += (character_pos.player_node.global_position - global_position).normalized()*delta*speed
 
 func die () -> void:
+	PlayerStatsInstance.gain_exp(exp_death)
 	queue_free()
