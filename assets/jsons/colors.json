@@ -1,0 +1,17 @@
+{
+    "color_palette": [
+        "#253657",
+        "#6f4367",
+        "#f8e9e5",
+        "#e76d8a",
+        "#f5a1a1",
+        "#a69aca"
+    ],
+    "background_color": "#253657",
+    "player_color": "#f5a1a1",
+    "enemy_colors": [
+        "#e76d8a",
+        "#6f4367",
+        "#a69aca"
+    ]
+}

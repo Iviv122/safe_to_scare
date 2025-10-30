@@ -1,0 +1,34 @@
+{
+    "enemies": [
+        {
+            "type": "basic",
+            "difficulty": 1,
+            "health": 1,
+            "speed": 250,
+            "exp": 1,
+            "size": 1,
+            "contact_damage": 1,
+            "color": "#a69aca"
+        },
+        {
+            "type": "basic",
+            "difficulty": 2,
+            "health": 3,
+            "speed": 125,
+            "exp": 1,
+            "size": 1.5,
+            "contact_damage": 2,
+            "color": "#6f4367"
+        },
+        {
+            "type": "basic",
+            "difficulty": 2,
+            "health": 1,
+            "speed": 400,
+            "exp": 1,
+            "size": 0.75,
+            "contact_damage": 1,
+            "color": "#e76d8a"
+        }
+    ]
+}

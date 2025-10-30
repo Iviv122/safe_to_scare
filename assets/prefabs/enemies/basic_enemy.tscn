@@ -37,7 +37,6 @@ shadow_item_cull_mask = 2
 texture = SubResource("GradientTexture2D_jj5up")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0.3764706, 0.30980393, 1, 1)
 scale = Vector2(0.24500002, 0.24500002)
 texture = ExtResource("3_xppan")
 
