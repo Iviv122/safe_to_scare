@@ -1,5 +1,5 @@
 extends Weapon
-class_name TripleShotWeapon
+class_name MultishotWeapon
 
 @export var angle : float = 15
 @export var projectiles : int = 3

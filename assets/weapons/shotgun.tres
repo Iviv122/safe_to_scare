@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="TripleShotWeapon" load_steps=3 format=3 uid="uid://c3jf3etdvvtiq"]
+[gd_resource type="Resource" script_class="MultishotWeapon" load_steps=3 format=3 uid="uid://c3jf3etdvvtiq"]
 
-[ext_resource type="Script" uid="uid://bml1kcrqttqpe" path="res://objects/weapons/triple_shot_weapon.gd" id="1_1aqo7"]
 [ext_resource type="PackedScene" uid="uid://dvu8namiqea5i" path="res://assets/prefabs/projectiles/PlayerBullet.tscn" id="1_15uhs"]
+[ext_resource type="Script" uid="uid://b82diy4xx3qpy" path="res://objects/weapons/multishot_weapon.gd" id="2_15uhs"]
 
 [resource]
-script = ExtResource("1_1aqo7")
+script = ExtResource("2_15uhs")
 projectile = ExtResource("1_15uhs")
