@@ -1,10 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvu8namiqea5i"]
+[gd_scene load_steps=6 format=3 uid="uid://dvu8namiqea5i"]
 
 [ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="1_ax5wk"]
 [ext_resource type="Script" uid="uid://c2l4xlhs72rft" path="res://objects/projectiles/player/simple_player_bullet.gd" id="1_lu20l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ax5wk"]
 radius = 19.026299
+
+[sub_resource type="Gradient" id="Gradient_ax5wk"]
+offsets = PackedFloat32Array(0, 0.64666665)
+colors = PackedColorArray(0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mi6rh"]
+gradient = SubResource("Gradient_ax5wk")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="PlayerBullet" type="Sprite2D"]
 scale = Vector2(0.075, 0.075)
@@ -18,3 +29,12 @@ metadata/_custom_type_script = "uid://c2l4xlhs72rft"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 top_level = true
 shape = SubResource("CircleShape2D_ax5wk")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+light_mask = 3
+energy = 2.0
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.8)
+shadow_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_mi6rh")
+texture_scale = 7.0

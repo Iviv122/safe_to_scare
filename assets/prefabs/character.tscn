@@ -32,11 +32,10 @@ scale = Vector2(0.15625001, 0.15625)
 texture = ExtResource("2_o8o60")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(2, 2)
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.8)
 texture = SubResource("GradientTexture2D_jj5up")
-texture_scale = 5.0
+texture_scale = 9.0
 script = ExtResource("3_jj5up")
 magnitude = 0.02
 metadata/_custom_type_script = "uid://dreu4tk4en3i5"
