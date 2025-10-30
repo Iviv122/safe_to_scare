@@ -4,9 +4,17 @@ class_name Inventory
 @export var weapon : Weapon
 @export var player_node : PlayerNode
 
-func _input(event):
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		shoot()
+var reload : float = 0 
 
 func shoot() -> void:
-	weapon.shoot(player_node.player_node)
+	if reload <= 0:
+		weapon.shoot(player_node.player_node)
+		reload =1
+
+
+func _process(delta):
+
+	if Input.is_action_pressed('shoot'):
+		shoot()
+
+	reload -= delta*weapon.reload_time

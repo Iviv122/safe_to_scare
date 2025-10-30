@@ -37,5 +37,5 @@ shadow_color = Color(0, 0, 0, 0.8)
 texture = SubResource("GradientTexture2D_jj5up")
 texture_scale = 9.0
 script = ExtResource("3_jj5up")
-magnitude = 0.02
+magnitude = 0.03
 metadata/_custom_type_script = "uid://dreu4tk4en3i5"
