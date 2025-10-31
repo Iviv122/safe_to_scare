@@ -8,6 +8,9 @@ class_name EnemySpawner
 
 var enemy_stats : Array[EnemyStats]
 
+## implement enemy tiers xd
+## many spawner? idk
+
 func _ready():
 	enemy_stats = EnemyParser.load_enemies_from_file()
 	spawning()
@@ -23,6 +26,9 @@ func spawn() -> void:
 
 	add_child(e)   
 
+
+func append_skill(e : Enemy) -> void:
+	pass
 
 func spawning() -> void:
 	await get_tree().create_timer(1/spawn_rate).timeout

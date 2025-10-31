@@ -22,7 +22,6 @@ func on_collide() -> void:
 # don't modify in child
 func _ready() -> void:
 	on_spawn()
-	pass
 # don't modify in child
 func check() -> void:
 	var space_state = get_world_2d().direct_space_state

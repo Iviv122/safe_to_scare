@@ -3,7 +3,7 @@ class_name PlayerStats
 
 var health : float = 3 
 var speed : float = 450 
-var damage : float = 450 
+var damage : float = 1 
 
 var level : int = 1 
 var expirience : float = 0

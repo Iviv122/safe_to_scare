@@ -1,7 +1,7 @@
 {
     "enemies": [
         {
-            "type": "basic",
+            "type": 0,
             "difficulty": 1,
             "health": 1,
             "speed": 250,
@@ -11,7 +11,7 @@
             "color": "#a69aca"
         },
         {
-            "type": "basic",
+            "type": 1,
             "difficulty": 2,
             "health": 3,
             "speed": 125,
@@ -21,7 +21,7 @@
             "color": "#6f4367"
         },
         {
-            "type": "basic",
+            "type": 1,
             "difficulty": 2,
             "health": 1,
             "speed": 400,

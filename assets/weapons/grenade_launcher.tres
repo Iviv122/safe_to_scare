@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://bciupennl7ox7"]
+
+[ext_resource type="PackedScene" uid="uid://dhnlahgwks1g8" path="res://assets/prefabs/projectiles/bomb.tscn" id="1_bhu83"]
+[ext_resource type="Script" uid="uid://bvrf2rrxafb6m" path="res://objects/weapons/weapon.gd" id="2_20uk7"]
+
+[resource]
+script = ExtResource("2_20uk7")
+reload_time = 2.0
+projectile = ExtResource("1_bhu83")
+metadata/_custom_type_script = "uid://bvrf2rrxafb6m"
