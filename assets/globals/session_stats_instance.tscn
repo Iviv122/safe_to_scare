@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ma06n0xi82by"]
+
+[ext_resource type="Script" uid="uid://cjrx54a3vb1hu" path="res://objects/game/session_stats.gd" id="1_hnswu"]
+
+[node name="SessionStatsInstance" type="Node"]
+script = ExtResource("1_hnswu")

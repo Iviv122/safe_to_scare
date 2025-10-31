@@ -1,9 +1,15 @@
 extends Node 
 class_name PlayerStats
 
+# ?? var max_health : float = 3
 var health : float = 3 
 var speed : float = 450 
+
+
+# modifier. Take item/weapon and multiply
 var damage : float = 1 
+var reload_speed : float = 1
+
 
 var level : int = 1 
 var expirience : float = 0

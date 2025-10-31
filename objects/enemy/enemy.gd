@@ -50,4 +50,5 @@ func _process(delta):
 
 func die () -> void:
 	PlayerStatsInstance.gain_exp(stats.exp_death)
+	SessionStatsInstance.kills += 1	
 	queue_free()

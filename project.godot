@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PlayerStatsInstance="*res://assets/globals/player_stats_instance.tscn"
 InventoryInstance="*res://assets/globals/inventory_instance.tscn"
+SessionStatsInstance="*res://assets/globals/session_stats_instance.tscn"
 
 [display]
 

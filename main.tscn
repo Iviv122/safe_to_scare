@@ -27,22 +27,24 @@ environment = SubResource("Environment_272bh")
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_ig7tw")]
 character_pos = ExtResource("2_0xm2m")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
-
 [node name="PlayerUi" parent="." instance=ExtResource("3_h2yge")]
 
-[node name="EnemySpawner" type="Node2D" parent="."]
+[node name="SceneItself" type="Node" parent="."]
+
+[node name="BcakGround" type="Sprite2D" parent="SceneItself"]
+self_modulate = Color(0.14117648, 0.11372549, 0.13725491, 1)
+z_index = -5
+scale = Vector2(6, 6)
+texture = ExtResource("7_272bh")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="SceneItself"]
+color = Color(0, 0, 0, 1)
+
+[node name="EnemySpawner" type="Node2D" parent="SceneItself"]
 position = Vector2(1, 0)
 script = ExtResource("5_7mycd")
 enemy_list = ExtResource("6_272bh")
 metadata/_custom_type_script = "uid://b1gu8n3r8qmq1"
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0, 0, 0, 1)
-
-[node name="BcakGround" type="Sprite2D" parent="."]
-self_modulate = Color(0.14117648, 0.11372549, 0.13725491, 1)
-z_index = -5
-scale = Vector2(6, 6)
-texture = ExtResource("7_272bh")
+[node name="Camera2D" type="Camera2D" parent="SceneItself"]
+zoom = Vector2(0.5, 0.5)
