@@ -1,4 +1,4 @@
-extends Button
+extends SelectCard 
 class_name SelectStat
 
 var stat : StatReward

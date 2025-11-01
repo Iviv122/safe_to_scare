@@ -82,9 +82,10 @@ script = ExtResource("3_rfelg")
 instructions = Array[ExtResource("4_mq1e0")]([SubResource("Resource_kek77"), SubResource("Resource_ycdy4")])
 metadata/_custom_type_script = "uid://bhiv2rge54nt0"
 
-[node name="SelectScreen" type="CanvasLayer" parent="." node_paths=PackedStringArray("tutor_label", "where_to_add")]
+[node name="SelectScreen" type="CanvasLayer" parent="." node_paths=PackedStringArray("tutor_label", "skip_button", "where_to_add")]
 script = ExtResource("5_mq1e0")
 tutor_label = NodePath("../TutorialLabel")
+skip_button = NodePath("Panel/SkipButton")
 where_to_add = NodePath("Panel/HBoxContainer/HBoxContainer")
 metadata/_custom_type_script = "uid://bp40a4n53ytv4"
 
@@ -105,12 +106,14 @@ grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SelectScreen/Panel/HBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="Button3" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "asdasd"
 
 [node name="Button2" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 text = "asdasd"
 
@@ -118,17 +121,21 @@ text = "asdasd"
 layout_mode = 2
 text = "asdasd"
 
-[node name="Label" type="Label" parent="SelectScreen/Panel"]
+[node name="Label" type="RichTextLabel" parent="SelectScreen/Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -152.0
-offset_top = 50.0
-offset_right = 152.0
-offset_bottom = 66.0
+offset_left = -200.0
+offset_top = 22.385
+offset_right = 200.0
+offset_bottom = 82.38499
 grow_horizontal = 2
-text = "Choose your reward!"
+bbcode_enabled = true
+text = "[tornado radius=3.0 freq=3.0]Choose your reward![/tornado]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SkipButton" type="Button" parent="SelectScreen/Panel" node_paths=PackedStringArray("screen")]
 layout_mode = 1
@@ -137,10 +144,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -36.0
-offset_top = -124.0
-offset_right = 36.0
-offset_bottom = -100.0
+offset_left = -42.50299
+offset_top = -108.91998
+offset_right = 47.49701
+offset_bottom = -70.91998
 grow_horizontal = 2
 grow_vertical = 0
 text = "Skip"

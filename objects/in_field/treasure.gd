@@ -20,13 +20,20 @@ func is_player_entered(n : Node2D) -> void:
 		is_filling = 1 
 func is_player_exited(n : Node2D) -> void:
 	if n is CharacterMovement:
-		is_filling = 0	
+		is_filling = -1	
 
 func proc() -> void:
+	get_tree().call_group("item_reward","item_reward")	
 	queue_free()
 
 func _process(delta : float):
 	time += delta*is_filling
-	progress.value = time
+
+	if time < 0:
+		time = 0
+
 	if time > time_to_fill:
 		proc()
+
+
+	progress.value = time

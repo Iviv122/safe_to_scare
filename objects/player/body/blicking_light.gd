@@ -10,7 +10,6 @@ var tween := create_tween()
 func _ready():
 	init_scale = texture_scale
 
-
 func _process(_delta):
 	texture_scale = init_scale+randf_range(-magnitude,magnitude)
 	var r = randf_range(-0.1,0.1)
