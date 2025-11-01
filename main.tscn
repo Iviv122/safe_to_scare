@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqhnx4c8jo6ke"]
+[gd_scene load_steps=9 format=3 uid="uid://bqhnx4c8jo6ke"]
 
 [ext_resource type="PackedScene" uid="uid://2isitvwkdo0m" path="res://assets/prefabs/character.tscn" id="1_ig7tw"]
 [ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/globals/player_pos.tres" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cuf6ygvr2uxvy" path="res://assets/prefabs/player_ui.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://b1gu8n3r8qmq1" path="res://objects/enemy/enemy_spawner.gd" id="5_7mycd"]
 [ext_resource type="Resource" uid="uid://b4dxrcn26x7p6" path="res://assets/lists/enemylist.tres" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://vfvh55drthvb" path="res://assets/prefabs/on_field/treasure.tscn" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://cw184a7800ha6" path="res://raw_assets/sprites/Square.png" id="7_272bh"]
 
 [sub_resource type="Environment" id="Environment_272bh"]
@@ -28,6 +29,9 @@ environment = SubResource("Environment_272bh")
 character_pos = ExtResource("2_0xm2m")
 
 [node name="PlayerUi" parent="." instance=ExtResource("3_h2yge")]
+
+[node name="Treasure" parent="." instance=ExtResource("7_5vw27")]
+position = Vector2(421, 305)
 
 [node name="SceneItself" type="Node" parent="."]
 

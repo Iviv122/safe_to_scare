@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://vfvh55drthvb"]
+
+[ext_resource type="Script" uid="uid://e4k4xfcve56q" path="res://objects/in_field/treasure.gd" id="1_wkswv"]
+[ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="2_anhvw"]
+[ext_resource type="Script" uid="uid://dreu4tk4en3i5" path="res://objects/player/body/blicking_light.gd" id="3_wxbp0"]
+[ext_resource type="Script" uid="uid://bjxd5dhoyulj0" path="res://objects/in_field/rotating.gd" id="4_2nc1o"]
+[ext_resource type="Texture2D" uid="uid://drwtuitutdqky" path="res://raw_assets/sprites/circle_dashed.png" id="4_e0yoc"]
+
+[sub_resource type="Gradient" id="Gradient_b5nef"]
+offsets = PackedFloat32Array(0, 0.64666665)
+colors = PackedColorArray(0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2nc1o"]
+gradient = SubResource("Gradient_b5nef")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wxbp0"]
+radius = 257.03113
+
+[node name="Treasure" type="Area2D" node_paths=PackedStringArray("progress")]
+script = ExtResource("1_wkswv")
+progress = NodePath("TextureProgressBar")
+metadata/_custom_type_script = "uid://e4k4xfcve56q"
+
+[node name="TreasurePoint" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.4, 1)
+self_modulate = Color(1, 1, 0.21568628, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_anhvw")
+
+[node name="AreaProgressSprite" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 0.039215688, 0.078431375)
+z_index = -2
+texture = ExtResource("2_anhvw")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.8)
+texture = SubResource("GradientTexture2D_2nc1o")
+texture_scale = 9.0
+script = ExtResource("3_wxbp0")
+metadata/_custom_type_script = "uid://dreu4tk4en3i5"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_wxbp0")
+
+[node name="RotatingSprite" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.24313726)
+scale = Vector2(3.960001, 3.960001)
+texture = ExtResource("4_e0yoc")
+script = ExtResource("4_2nc1o")
+metadata/_custom_type_script = "uid://bjxd5dhoyulj0"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+z_index = -1
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+step = 0.01
+fill_mode = 3
+texture_progress = ExtResource("2_anhvw")
+tint_progress = Color(1, 1, 0, 0.19607843)
