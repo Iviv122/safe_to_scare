@@ -1,7 +1,7 @@
 extends Node 
 class_name PlayerStats
 
-# ?? var max_health : float = 3
+var max_health : float = 3
 var health : float = 3 
 var speed : float = 450 
 
@@ -18,6 +18,17 @@ var expirience_req : float = 10
 signal updated() 
 signal died()
 signal lvl_up()
+
+func add_stats(stats : StatReward) ->void:
+    max_health = stats.max_health
+    speed = stats.speed
+    reload_speed = stats.reload_speed 
+    damage = stats.damage
+
+    health = max_health
+
+func _ready():
+    health = max_health
 
 func gain_exp(a : float) -> void:
 

@@ -24,4 +24,5 @@ func update() -> void:
 		text = instructions[i]._to_string()
 
 func _input(event):
-	instructions[i]._input(event)
+	if i < instructions.size():
+		instructions[i]._input(event)
