@@ -8,12 +8,10 @@ class_name EnemySpawner
 
 var enemy_stats : Array[EnemyStats]
 
-## implement enemy tiers xd
-## many spawner? idk
+var timer :float = 1
 
 func _ready():
 	enemy_stats = EnemyParser.load_enemies_from_file()
-	spawning()
 
 func spawn() -> void:
 
@@ -24,13 +22,19 @@ func spawn() -> void:
 	e.global_position = pos
 	e.insert_stats(enemy_stats.pick_random().duplicate())
 
-	add_child(e)   
+	add_child(e)  
+
+	timer = 1 
 
 
-func append_skill(e : Enemy) -> void:
+func append_skill(_e : Enemy) -> void:
 	pass
 
-func spawning() -> void:
-	await get_tree().create_timer(1/spawn_rate).timeout
-	spawn()
-	spawning()
+func _process(delta):
+	if GameStateInstance.state != GameState.State.Playing:
+		return	
+	
+	if timer <= 0:
+		spawn()
+	timer -= delta*spawn_radius
+

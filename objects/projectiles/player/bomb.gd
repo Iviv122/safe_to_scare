@@ -5,6 +5,8 @@ class_name Bomb
 @export var fly_distance: float = 300
 @export var explosion_radius: float = 80
 
+var time_remain : float = life_time
+
 func explode() -> void:
 	var space_state = get_world_2d().direct_space_state
 
@@ -47,3 +49,13 @@ func on_collide() -> void:
 
 func move() -> void:
 	global_position += dir*speed
+
+func _process(delta):
+
+	if GameStateInstance.state == GameState.State.Selecting:
+		return	
+	
+	if time_remain <= 0:
+		explode()
+
+	time_remain -= delta

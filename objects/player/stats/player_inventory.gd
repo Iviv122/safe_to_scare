@@ -13,7 +13,10 @@ func shoot() -> void:
 
 func _process(delta):
 
-	if Input.is_action_pressed('shoot'):
+	if GameStateInstance.state == GameState.State.Selecting:
+		return
+
+	if Input.is_action_pressed('left mouse button'):
 		shoot()
 
 	reload -= delta*PlayerStatsInstance.reload_speed

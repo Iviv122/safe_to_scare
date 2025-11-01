@@ -1,12 +1,39 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuf6ygvr2uxvy"]
+[gd_scene load_steps=14 format=3 uid="uid://cuf6ygvr2uxvy"]
 
 [ext_resource type="Script" uid="uid://eungeq374kpr" path="res://objects/player/ui/health_bar.gd" id="1_fdptt"]
 [ext_resource type="Script" uid="uid://bo66ueilcmsbp" path="res://objects/player/ui/xp_bar.gd" id="2_8fjfj"]
+[ext_resource type="Script" uid="uid://bhiv2rge54nt0" path="res://objects/tutorial/tutorial_label.gd" id="3_rfelg"]
+[ext_resource type="Script" uid="uid://q5oeybigq3m2" path="res://objects/tutorial/tutorial_block.gd" id="4_mq1e0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fjfj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_duvrd"]
 bg_color = Color(1.4439225e-06, 0.57042897, 0.82997245, 1)
+
+[sub_resource type="InputEventAction" id="InputEventAction_5vw27"]
+action = &"a"
+
+[sub_resource type="InputEventAction" id="InputEventAction_kek77"]
+action = &"w"
+
+[sub_resource type="InputEventAction" id="InputEventAction_4c57u"]
+action = &"d"
+
+[sub_resource type="InputEventAction" id="InputEventAction_efxa6"]
+action = &"s"
+
+[sub_resource type="Resource" id="Resource_kek77"]
+script = ExtResource("4_mq1e0")
+list = Array[InputEventAction]([SubResource("InputEventAction_5vw27"), SubResource("InputEventAction_kek77"), SubResource("InputEventAction_4c57u"), SubResource("InputEventAction_efxa6")])
+metadata/_custom_type_script = "uid://q5oeybigq3m2"
+
+[sub_resource type="InputEventAction" id="InputEventAction_dg77c"]
+action = &"left mouse button"
+
+[sub_resource type="Resource" id="Resource_ycdy4"]
+script = ExtResource("4_mq1e0")
+list = Array[InputEventAction]([SubResource("InputEventAction_dg77c")])
+metadata/_custom_type_script = "uid://q5oeybigq3m2"
 
 [node name="PlayerUi" type="CanvasLayer"]
 
@@ -33,3 +60,22 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_duvrd")
 value = 50.0
 show_percentage = false
 script = ExtResource("2_8fjfj")
+
+[node name="TutorialLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+focus_mode = 0
+mouse_filter = 2
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_rfelg")
+instructions = Array[ExtResource("4_mq1e0")]([SubResource("Resource_kek77"), SubResource("Resource_ycdy4")])
+metadata/_custom_type_script = "uid://bhiv2rge54nt0"

@@ -46,6 +46,8 @@ func damage(a : float) -> void:
 	damaged.emit()
 
 func _process(delta):
+	if GameStateInstance.state == GameState.State.Selecting:
+		return
 	global_position += (character_pos.player_node.global_position - global_position).normalized()*delta*stats.speed
 
 func die () -> void:
