@@ -22,10 +22,21 @@ func explode() -> void:
 
 	var result1 = space_state.intersect_shape(query)
 
+	var effect : GPUParticles2D = explosion_effect.instantiate() 
+	effect.global_position = global_position
+	effect.emitting = true
+	get_tree().current_scene.add_child(effect)
+
+
+
 	if result1.size() > 0:
 		for i in result1:
 			if i.collider is Enemy:
 				i.collider.damage(PlayerStatsInstance.damage * damage_modifier)
+				effect = hit_effect.instantiate() 
+				effect.global_position = i.collider.global_position
+				effect.emitting = true
+				get_tree().current_scene.add_child(effect)
 
 	queue_free()
 

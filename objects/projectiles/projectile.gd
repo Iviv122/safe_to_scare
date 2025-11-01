@@ -5,6 +5,9 @@ class_name Projectile
 @export var speed : float
 @export var damage_modifier : float
 
+const hit_effect : PackedScene = preload("res://assets/prefabs/particles/hit_effect.tscn")
+const explosion_effect : PackedScene = preload('res://assets/prefabs/particles/explosion_effect.tscn')
+
 var dir : Vector2
 var result : Array[Dictionary]
 

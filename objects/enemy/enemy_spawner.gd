@@ -2,7 +2,7 @@ extends Node2D
 class_name EnemySpawner
 
 @export var enemy_list : EnemyList 
-@export var spawn_rate : float = 5
+@export var spawn_rate : float = 1
 
 @export var spawn_radius : float = 1500
 
@@ -36,5 +36,5 @@ func _process(delta):
 	
 	if timer <= 0:
 		spawn()
-	timer -= delta*spawn_radius
+	timer -= delta*spawn_rate
 
