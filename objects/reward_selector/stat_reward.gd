@@ -22,9 +22,9 @@ static func from_dict(data: Dictionary) -> StatReward:
 func _to_string() -> String:
 	var ans = ""
 
-	if max_health != 0 : ans += "Max Health: " + str(max_health)+ "\n"
-	if speed != 0 : ans += "Speed: " + str(speed)+ "\n"
-	if damage != 0 : ans += "Damage: " + str(damage)+ "\n"
-	if reload_speed != 0 : ans += "Reload Speed: " + str(reload_speed)+ "\n"
+	if max_health != 0 : ans += "Max Health +" + str(max_health)+ "\n"
+	if speed != 0 : ans += "Speed +" + str(speed)+ "\n"
+	if damage != 0 : ans += "Damage +" + str(damage)+ "\n"
+	if reload_speed != 0 : ans += "Reload Speed +" + str(reload_speed)+ "\n"
 
 	return ans

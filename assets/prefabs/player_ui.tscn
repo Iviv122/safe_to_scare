@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://cuf6ygvr2uxvy"]
+[gd_scene load_steps=16 format=3 uid="uid://cuf6ygvr2uxvy"]
 
 [ext_resource type="Script" uid="uid://eungeq374kpr" path="res://objects/player/ui/health_bar.gd" id="1_fdptt"]
 [ext_resource type="Script" uid="uid://bo66ueilcmsbp" path="res://objects/player/ui/xp_bar.gd" id="2_8fjfj"]
 [ext_resource type="Script" uid="uid://bhiv2rge54nt0" path="res://objects/tutorial/tutorial_label.gd" id="3_rfelg"]
 [ext_resource type="Script" uid="uid://q5oeybigq3m2" path="res://objects/tutorial/tutorial_block.gd" id="4_mq1e0"]
 [ext_resource type="Script" uid="uid://bp40a4n53ytv4" path="res://objects/reward_selector/select_screen.gd" id="5_mq1e0"]
+[ext_resource type="Script" uid="uid://dkbsbh15eyff6" path="res://objects/reward_selector/skip.gd" id="6_b6pqp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fjfj"]
 
@@ -116,3 +117,33 @@ text = "asdasd"
 [node name="Button" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "asdasd"
+
+[node name="Label" type="Label" parent="SelectScreen/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_top = 50.0
+offset_right = 152.0
+offset_bottom = 66.0
+grow_horizontal = 2
+text = "Choose your reward!"
+
+[node name="SkipButton" type="Button" parent="SelectScreen/Panel" node_paths=PackedStringArray("screen")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -124.0
+offset_right = 36.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Skip"
+script = ExtResource("6_b6pqp")
+screen = NodePath("../..")
+metadata/_custom_type_script = "uid://dkbsbh15eyff6"

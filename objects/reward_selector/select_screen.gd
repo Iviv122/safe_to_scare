@@ -23,6 +23,9 @@ func appear() -> void:
 func select_item() -> void:
 	appear()
 
+func disappear() -> void:
+	hide()
+	GameStateInstance.set_state(GameState.State.Playing)
 
 func select_stat() -> void:
 	for i in where_to_add.get_children():
@@ -33,5 +36,10 @@ func select_stat() -> void:
 	for i in range(0,3):
 		var b = SelectStat.new()
 		b.stat =  stats_list.pick_random()
+		b.custom_minimum_size = Vector2(300,300)
 		b.text = b.stat._to_string()
+		b.pressed.connect(disappear)
 		where_to_add.add_child(b)
+
+func skip() -> void:
+	disappear()

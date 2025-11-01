@@ -5,4 +5,3 @@ var stat : StatReward
 
 func _pressed() -> void:
     PlayerStatsInstance.add_stats(stat)
-    GameStateInstance.set_state(GameState.State.Playing)
