@@ -81,9 +81,10 @@ script = ExtResource("3_rfelg")
 instructions = Array[ExtResource("4_mq1e0")]([SubResource("Resource_kek77"), SubResource("Resource_ycdy4")])
 metadata/_custom_type_script = "uid://bhiv2rge54nt0"
 
-[node name="SelectScreen" type="CanvasLayer" parent="." node_paths=PackedStringArray("tutor_label")]
+[node name="SelectScreen" type="CanvasLayer" parent="." node_paths=PackedStringArray("tutor_label", "where_to_add")]
 script = ExtResource("5_mq1e0")
 tutor_label = NodePath("../TutorialLabel")
+where_to_add = NodePath("Panel/HBoxContainer/HBoxContainer")
 metadata/_custom_type_script = "uid://bp40a4n53ytv4"
 
 [node name="Panel" type="Panel" parent="SelectScreen"]
@@ -92,3 +93,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HBoxContainer" type="CenterContainer" parent="SelectScreen/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SelectScreen/Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "asdasd"
+
+[node name="Button2" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "asdasd"
+
+[node name="Button" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "asdasd"

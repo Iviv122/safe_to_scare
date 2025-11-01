@@ -5,7 +5,6 @@ var max_health : float = 3
 var health : float = 3 
 var speed : float = 450 
 
-
 # modifier. Take item/weapon and multiply
 var damage : float = 1 
 var reload_speed : float = 1
@@ -20,12 +19,14 @@ signal died()
 signal lvl_up()
 
 func add_stats(stats : StatReward) ->void:
-    max_health = stats.max_health
-    speed = stats.speed
-    reload_speed = stats.reload_speed 
-    damage = stats.damage
+    max_health += stats.max_health
+    speed += stats.speed
+    reload_speed += stats.reload_speed 
+    damage += stats.damage
 
-    health = max_health
+    health += max_health
+
+    updated.emit()
 
 func _ready():
     health = max_health

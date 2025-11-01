@@ -17,8 +17,6 @@ func move() -> void:
 func on_collide() -> void:
 	pass
 
-
-
 # don't modify in child
 func _ready() -> void:
 	on_spawn()
