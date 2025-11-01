@@ -3,6 +3,8 @@ class_name TutorialLabel
 
 @export var instructions : Array[TutorialBlock]
 
+signal tutor_ended()
+
 var i = 0
 
 func _ready():
@@ -12,11 +14,12 @@ func _ready():
 	update()
 
 func end_tutor() -> void:
-	pass
+	tutor_ended.emit()	
 
 func next() -> void:
 	i += 1
 	if i >= instructions.size():
+		end_tutor()
 		queue_free()
 
 func update() -> void:

@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cuf6ygvr2uxvy"]
+[gd_scene load_steps=15 format=3 uid="uid://cuf6ygvr2uxvy"]
 
 [ext_resource type="Script" uid="uid://eungeq374kpr" path="res://objects/player/ui/health_bar.gd" id="1_fdptt"]
 [ext_resource type="Script" uid="uid://bo66ueilcmsbp" path="res://objects/player/ui/xp_bar.gd" id="2_8fjfj"]
 [ext_resource type="Script" uid="uid://bhiv2rge54nt0" path="res://objects/tutorial/tutorial_label.gd" id="3_rfelg"]
 [ext_resource type="Script" uid="uid://q5oeybigq3m2" path="res://objects/tutorial/tutorial_block.gd" id="4_mq1e0"]
+[ext_resource type="Script" uid="uid://bp40a4n53ytv4" path="res://objects/reward_selector/select_screen.gd" id="5_mq1e0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fjfj"]
 
@@ -79,3 +80,15 @@ vertical_alignment = 1
 script = ExtResource("3_rfelg")
 instructions = Array[ExtResource("4_mq1e0")]([SubResource("Resource_kek77"), SubResource("Resource_ycdy4")])
 metadata/_custom_type_script = "uid://bhiv2rge54nt0"
+
+[node name="SelectScreen" type="CanvasLayer" parent="." node_paths=PackedStringArray("tutor_label")]
+script = ExtResource("5_mq1e0")
+tutor_label = NodePath("../TutorialLabel")
+metadata/_custom_type_script = "uid://bp40a4n53ytv4"
+
+[node name="Panel" type="Panel" parent="SelectScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

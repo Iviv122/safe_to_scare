@@ -9,6 +9,9 @@ func _ready():
 	character_pos.player_node = self
 
 func _physics_process(_delta: float) -> void:
+	if GameStateInstance.state == GameState.State.Selecting:
+		return
+
 
 	direction = Vector2.ZERO 
 

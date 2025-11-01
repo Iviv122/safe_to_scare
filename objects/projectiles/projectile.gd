@@ -42,5 +42,8 @@ func check() -> void:
 		on_collide()
 # don't modify in child, physics for slower update
 func _physics_process(_delta):
+	if GameStateInstance.state == GameState.State.Selecting:
+		return	
+
 	check()
 	move()
