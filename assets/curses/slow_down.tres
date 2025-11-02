@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SlowDown" load_steps=2 format=3 uid="uid://s7kt3yoyec35"]
+
+[ext_resource type="Script" uid="uid://cugqc07figr2k" path="res://objects/curses/names/slow_down.gd" id="1_vu6si"]
+
+[resource]
+script = ExtResource("1_vu6si")
+desc = "slow_down"
