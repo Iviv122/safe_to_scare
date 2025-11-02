@@ -27,6 +27,11 @@ GameStateInstance="*res://assets/globals/game_state_instance.tscn"
 window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="viewport"
+window/vsync/vsync_mode=0
+
+[editor]
+
+movie_writer/disable_vsync=true
 
 [editor_plugins]
 

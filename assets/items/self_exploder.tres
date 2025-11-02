@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SelfExplodeItem" load_steps=2 format=3 uid="uid://drbl1df2lflb4"]
+
+[ext_resource type="Script" uid="uid://du12w1nnaa6c7" path="res://objects/items/item/player_explodes_item.gd" id="1_no4je"]
+
+[resource]
+script = ExtResource("1_no4je")
+metadata/_custom_type_script = "uid://du12w1nnaa6c7"
