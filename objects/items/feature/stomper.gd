@@ -1,9 +1,10 @@
-extends Area2D 
-class_name AirStrike
+extends Area2D
+class_name Stomper
 
 @export var progress_bar : TextureProgressBar
-@export var time_to_explode : float
-@export var explode_effect : PackedScene 
+@export var time_to_explode : float = 1
+
+@export var stomp_effect : GPUParticles2D
 
 var time : float = 0
 
@@ -16,19 +17,14 @@ func _ready():
 func detect() -> void:
 	for i in get_overlapping_bodies():
 		if i is Enemy:
-			i.damage(1)
+			i.damage(0.5)
 	for i in get_overlapping_areas():
 		if i is Enemy:
-			i.damage(1)
+			i.damage(0.5)
 
 func proc() -> void:
-	
-	var ef : GPUParticles2D= explode_effect.instantiate()
-	ef.global_position = global_position
-	ef.restart()
-	get_tree().current_scene.add_child(ef)
-	detect()
-	queue_free()
+	detect()	
+	stomp_effect.restart()
 
 func _process(delta : float):
 	
@@ -39,6 +35,7 @@ func _process(delta : float):
 
 	if time > time_to_explode:
 		proc()
+		time = 0
 
 
 	progress_bar.value = time

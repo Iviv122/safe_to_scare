@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PlaceStomper" load_steps=2 format=3 uid="uid://bkjvnja3prsc4"]
+
+[ext_resource type="Script" uid="uid://bf1e53vtnurpb" path="res://objects/items/item/place_stomper.gd" id="1_adwjc"]
+
+[resource]
+script = ExtResource("1_adwjc")
+metadata/_custom_type_script = "uid://bf1e53vtnurpb"

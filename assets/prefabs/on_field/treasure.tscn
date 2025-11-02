@@ -20,6 +20,7 @@ fill_from = Vector2(0.5, 0.5)
 radius = 257.03113
 
 [node name="Treasure" type="Area2D" node_paths=PackedStringArray("progress")]
+disable_mode = 1
 script = ExtResource("1_wkswv")
 progress = NodePath("TextureProgressBar")
 metadata/_custom_type_script = "uid://e4k4xfcve56q"

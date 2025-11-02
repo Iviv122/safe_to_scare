@@ -20,6 +20,7 @@ radius = 29.0
 
 [node name="Medkit" type="Area2D" node_paths=PackedStringArray("appear_particle")]
 modulate = Color(0, 1, 0.1764706, 1)
+disable_mode = 1
 script = ExtResource("1_nag7e")
 appear_particle = NodePath("Node2D")
 metadata/_custom_type_script = "uid://inx2vr573i0a"

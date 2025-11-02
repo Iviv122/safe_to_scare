@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://b4dxrcn26x7p6" path="res://assets/lists/enemylist.tres" id="6_272bh"]
 [ext_resource type="PackedScene" uid="uid://vfvh55drthvb" path="res://assets/prefabs/on_field/treasure.tscn" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://cw184a7800ha6" path="res://raw_assets/sprites/Square.png" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://d262mahci6s8p" path="res://assets/prefabs/on_field/medkit.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://d262mahci6s8p" path="res://assets/prefabs/items/medkit.tscn" id="8_5vw27"]
 
 [sub_resource type="Environment" id="Environment_272bh"]
 background_mode = 3

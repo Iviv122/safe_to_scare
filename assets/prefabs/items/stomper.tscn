@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://tvk6kl1caafo"]
+[gd_scene load_steps=7 format=3 uid="uid://rnb77wk834je"]
 
-[ext_resource type="Script" uid="uid://pjvyrip2ioe0" path="res://objects/items/feature/air_strike.gd" id="1_ag0vk"]
-[ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="2_epul2"]
-[ext_resource type="PackedScene" uid="uid://ptuwjjdy4ltn" path="res://assets/prefabs/particles/explosion_effect.tscn" id="3_t2ivu"]
+[ext_resource type="Script" uid="uid://ch1rctindg36x" path="res://objects/items/feature/stomper.gd" id="1_bmqc7"]
+[ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="2_qab77"]
+[ext_resource type="PackedScene" uid="uid://ptuwjjdy4ltn" path="res://assets/prefabs/particles/explosion_effect.tscn" id="3_qab77"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ag0vk"]
-radius = 257.03113
+radius = 128.52
 
 [sub_resource type="Gradient" id="Gradient_b5nef"]
 offsets = PackedFloat32Array(0, 0.64666665)
@@ -18,13 +18,12 @@ height = 256
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="Node2D" type="Area2D" node_paths=PackedStringArray("progress_bar")]
+[node name="Node2D" type="Area2D" node_paths=PackedStringArray("progress_bar", "stomp_effect")]
 disable_mode = 1
-script = ExtResource("1_ag0vk")
+script = ExtResource("1_bmqc7")
 progress_bar = NodePath("TextureProgressBar")
-time_to_explode = 2.0
-explode_effect = ExtResource("3_t2ivu")
-metadata/_custom_type_script = "uid://pjvyrip2ioe0"
+stomp_effect = NodePath("ExplosionParticles")
+metadata/_custom_type_script = "uid://ch1rctindg36x"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -33,18 +32,20 @@ shape = SubResource("CircleShape2D_ag0vk")
 [node name="AreaProgressSprite" type="Sprite2D" parent="."]
 self_modulate = Color(1, 0, 0.039215688, 0.078431375)
 z_index = -2
-texture = ExtResource("2_epul2")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_qab77")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 z_index = -1
-offset_left = -256.0
-offset_top = -256.0
-offset_right = 256.0
-offset_bottom = 256.0
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 384.0
+offset_bottom = 384.0
+scale = Vector2(0.5, 0.5)
 step = 0.01
 value = 100.0
 fill_mode = 5
-texture_progress = ExtResource("2_epul2")
+texture_progress = ExtResource("2_qab77")
 tint_progress = Color(1, 0, 0, 0.3372549)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -53,4 +54,7 @@ energy = 2.5
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.8)
 texture = SubResource("GradientTexture2D_oh046")
-texture_scale = 9.0
+texture_scale = 4.5
+
+[node name="ExplosionParticles" parent="." instance=ExtResource("3_qab77")]
+script = null

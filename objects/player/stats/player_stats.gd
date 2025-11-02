@@ -38,6 +38,7 @@ func _ready():
 func heal() -> void:
     health = max_health
     healed.emit()
+    updated.emit()
 
 func gain_exp(a : float) -> void:
 

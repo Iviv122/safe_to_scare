@@ -1,7 +1,7 @@
 extends Node2D
 class_name MedKiter
 
-const air_strike : PackedScene = preload("res://assets/prefabs/on_field/medkit.tscn")
+const air_strike : PackedScene = preload("res://assets/prefabs/items/medkit.tscn")
 @export var spawn_radius : float = 700
 
 @export var every_x_seconds : float = 5
