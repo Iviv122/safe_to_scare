@@ -18,6 +18,7 @@ var expirience_req : float = 10
 
 signal updated() 
 signal damaged()
+signal healed()
 signal died()
 signal lvl_up()
 
@@ -27,12 +28,16 @@ func add_stats(stats : StatReward) ->void:
     reload_speed += stats.reload_speed 
     damage += stats.damage
 
-    health = max_health
+    heal()
 
     updated.emit()
 
 func _ready():
+    heal()
+
+func heal() -> void:
     health = max_health
+    healed.emit()
 
 func gain_exp(a : float) -> void:
 
@@ -44,6 +49,7 @@ func gain_exp(a : float) -> void:
     if expirience >= expirience_req:
         level += 1
         expirience = 0
+        expirience_req += expirience_req
         lvl_up.emit()
 
     updated.emit()

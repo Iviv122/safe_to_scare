@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cuf6ygvr2uxvy"]
+[gd_scene load_steps=21 format=3 uid="uid://cuf6ygvr2uxvy"]
 
 [ext_resource type="Script" uid="uid://eungeq374kpr" path="res://objects/player/ui/health_bar.gd" id="1_fdptt"]
 [ext_resource type="Script" uid="uid://bo66ueilcmsbp" path="res://objects/player/ui/xp_bar.gd" id="2_8fjfj"]
@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://c4ahjx70t3r2m" path="res://assets/lists/stat_reward_list.tres" id="6_ph2sl"]
 [ext_resource type="Script" uid="uid://so4djlyl7y8g" path="res://objects/player/ui/damaged.gd" id="9_6u2vk"]
 [ext_resource type="Texture2D" uid="uid://cw184a7800ha6" path="res://raw_assets/sprites/Square.png" id="9_cp3yg"]
+[ext_resource type="Script" uid="uid://cdanv3wy5upbb" path="res://objects/player/ui/healed.gd" id="10_6psqx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fjfj"]
 
@@ -163,6 +164,12 @@ text = "Skip"
 script = ExtResource("6_b6pqp")
 screen = NodePath("../..")
 metadata/_custom_type_script = "uid://dkbsbh15eyff6"
+
+[node name="HealTint" type="Sprite2D" parent="."]
+self_modulate = Color(0, 1, 0, 1)
+scale = Vector2(15, 15)
+texture = ExtResource("9_cp3yg")
+script = ExtResource("10_6psqx")
 
 [node name="DamageTint" type="Sprite2D" parent="."]
 self_modulate = Color(1, 0, 0, 1)

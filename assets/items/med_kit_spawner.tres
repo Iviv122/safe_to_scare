@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="MedKitSpawner" load_steps=2 format=3 uid="uid://blnly8tk5b3u7"]
+
+[ext_resource type="Script" uid="uid://blkid6osyyff1" path="res://objects/items/item/medkit_spawner.gd" id="1_l61rb"]
+
+[resource]
+script = ExtResource("1_l61rb")
+metadata/_custom_type_script = "uid://blkid6osyyff1"
