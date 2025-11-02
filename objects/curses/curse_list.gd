@@ -17,7 +17,7 @@ func shuffle() -> void:
 
 
 func get_item() -> Curse:
-	if queue.size() <= 3:
+	if queue.size() <= 1:
 		shuffle()
 	
 	return queue.pop_back()

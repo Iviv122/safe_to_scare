@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SpeedUp" load_steps=2 format=3 uid="uid://cl4qrf8sj122l"]
+
+[ext_resource type="Script" uid="uid://du1ds7vwhfxfy" path="res://objects/curses/names/speed_up.gd" id="1_yoidi"]
+
+[resource]
+script = ExtResource("1_yoidi")
+desc = "Speed up... for everyone"

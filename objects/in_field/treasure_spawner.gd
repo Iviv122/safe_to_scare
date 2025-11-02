@@ -1,7 +1,7 @@
 extends Node2D
 class_name TreasureSpawner 
 
-@export var spawn_rate : float = 10
+@export var spawn_rate : float = 6
 var treaure : PackedScene = preload("res://assets/prefabs/on_field/treasure.tscn")
 @export var spawn_radius : float = 600
 
@@ -25,5 +25,6 @@ func _process(delta):
 	
 	if timer <= 0:
 		shoot()
+		spawn_rate *= 1.5
 		timer = spawn_rate 
 	timer -= delta

@@ -6,7 +6,7 @@ class_name CurseMeter
 var time = 0
 
 func _ready():
-	max_value = 8
+	max_value = 15
 	min_value = 0
 
 func _process(delta: float) -> void:
@@ -18,4 +18,5 @@ func _process(delta: float) -> void:
 	value = time
 	if value >= max_value:
 		time = 0
+		max_value *= 1.5
 		select_screen.curse_reward()
