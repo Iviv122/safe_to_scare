@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqhnx4c8jo6ke"]
+[gd_scene load_steps=11 format=3 uid="uid://bqhnx4c8jo6ke"]
 
 [ext_resource type="PackedScene" uid="uid://2isitvwkdo0m" path="res://assets/prefabs/character.tscn" id="1_ig7tw"]
 [ext_resource type="Resource" uid="uid://caq34i3pyskbr" path="res://assets/globals/player_pos.tres" id="2_0xm2m"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://vfvh55drthvb" path="res://assets/prefabs/on_field/treasure.tscn" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://cw184a7800ha6" path="res://raw_assets/sprites/Square.png" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://d262mahci6s8p" path="res://assets/prefabs/items/medkit.tscn" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://chewpjwkpxqok" path="res://objects/in_field/treasure_spawner.gd" id="9_kek77"]
 
 [sub_resource type="Environment" id="Environment_272bh"]
 background_mode = 3
@@ -56,3 +57,6 @@ zoom = Vector2(0.5, 0.5)
 
 [node name="Medkit" parent="SceneItself" instance=ExtResource("8_5vw27")]
 position = Vector2(328, 577)
+
+[node name="TreasureSpawner" type="Node2D" parent="SceneItself"]
+script = ExtResource("9_kek77")
