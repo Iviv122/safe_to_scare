@@ -1,6 +1,8 @@
 extends Node 
 class_name PlayerStats
 
+@export var player_node : PlayerNode
+
 var max_health : float = 3
 var health : float = 3 
 var speed : float = 450 

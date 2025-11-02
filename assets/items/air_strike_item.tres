@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="AirStrikeItem" load_steps=2 format=3 uid="uid://cyykegf2ntb1i"]
+
+[ext_resource type="Script" uid="uid://bd2m7ereddjvh" path="res://objects/items/item/air_strike_item.gd" id="1_cd45p"]
+
+[resource]
+script = ExtResource("1_cd45p")
+metadata/_custom_type_script = "uid://bd2m7ereddjvh"

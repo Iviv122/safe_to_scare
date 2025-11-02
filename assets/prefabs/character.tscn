@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://2isitvwkdo0m"]
+[gd_scene load_steps=6 format=3 uid="uid://2isitvwkdo0m"]
 
 [ext_resource type="Script" uid="uid://bv1cw1etcheas" path="res://objects/player/body/character_movement.gd" id="1_hv81v"]
 [ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="2_o8o60"]
-[ext_resource type="Script" uid="uid://dreu4tk4en3i5" path="res://objects/player/body/blicking_light.gd" id="3_jj5up"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
 radius = 38.470768
@@ -37,6 +36,3 @@ shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.8)
 texture = SubResource("GradientTexture2D_jj5up")
 texture_scale = 9.0
-script = ExtResource("3_jj5up")
-magnitude = 0.03
-metadata/_custom_type_script = "uid://dreu4tk4en3i5"

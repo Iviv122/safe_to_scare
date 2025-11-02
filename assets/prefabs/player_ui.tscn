@@ -109,17 +109,20 @@ layout_mode = 2
 theme_override_constants/separation = 16
 
 [node name="Button3" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-text = "asdasd"
+text = "Air strikes every second"
 
 [node name="Button2" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(15, 0)
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-text = "asdasd"
+text = "Air strikes every second"
+autowrap_mode = 3
 
 [node name="Button" type="Button" parent="SelectScreen/Panel/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-text = "asdasd"
+text = "Air strikes every second"
 
 [node name="Label" type="RichTextLabel" parent="SelectScreen/Panel"]
 layout_mode = 1

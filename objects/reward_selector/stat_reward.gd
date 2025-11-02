@@ -6,8 +6,6 @@ class_name StatReward
 @export var damage: float
 @export var reload_speed : float
 
-
-
 static func from_dict(data: Dictionary) -> StatReward:
 	var stats : StatReward = StatReward.new()
 

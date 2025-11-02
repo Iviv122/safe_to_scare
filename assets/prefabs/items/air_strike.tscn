@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://tvk6kl1caafo"]
+
+[ext_resource type="Script" uid="uid://pjvyrip2ioe0" path="res://objects/items/feature/air_strike.gd" id="1_ag0vk"]
+[ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="2_epul2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ag0vk"]
+radius = 257.03113
+
+[sub_resource type="Gradient" id="Gradient_b5nef"]
+offsets = PackedFloat32Array(0, 0.64666665)
+colors = PackedColorArray(0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oh046"]
+gradient = SubResource("Gradient_b5nef")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Node2D" type="Area2D" node_paths=PackedStringArray("progress_bar")]
+script = ExtResource("1_ag0vk")
+progress_bar = NodePath("TextureProgressBar")
+time_to_explode = 2.0
+metadata/_custom_type_script = "uid://pjvyrip2ioe0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_ag0vk")
+
+[node name="AreaProgressSprite" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0, 0.039215688, 0.078431375)
+z_index = -2
+texture = ExtResource("2_epul2")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+z_index = -1
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+step = 0.01
+value = 100.0
+fill_mode = 5
+texture_progress = ExtResource("2_epul2")
+tint_progress = Color(1, 0, 0, 0.3372549)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.3, 0.3)
+energy = 2.5
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.8)
+texture = SubResource("GradientTexture2D_oh046")
+texture_scale = 9.0

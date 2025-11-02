@@ -1,5 +1,7 @@
-extends Button
+extends SelectCard 
 class_name SelectItem 
 
-func _ready():
-    pass
+var item : Item
+
+func _pressed() -> void:
+    item.pick_up(PlayerStatsInstance.player_node.player_node)

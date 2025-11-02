@@ -6,6 +6,8 @@ var tween : Tween
 
 func _ready():
 
+	autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+
 	mouse_exited.connect(shrink)
 	mouse_entered.connect(expand)
 

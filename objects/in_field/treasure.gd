@@ -8,6 +8,8 @@ var is_filling : int = 0
 var time :float= 0
 
 func _ready():
+	ItemsList.get_list()
+
 	progress.min_value = 0
 	progress.max_value = time_to_fill
 	progress.value = time 
@@ -27,6 +29,10 @@ func proc() -> void:
 	queue_free()
 
 func _process(delta : float):
+	
+	if GameStateInstance.state == GameState.State.Selecting:
+		return
+
 	time += delta*is_filling
 
 	if time < 0:

@@ -24,10 +24,8 @@ func _input(_event):
 			if !list_done[i]:
 				left -= 1
 				list_done[i] = true
-				print(left)
 				if left <= 0:
 					all_done.emit()
-					print("All down")
 			
 			updated.emit()
 

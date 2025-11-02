@@ -1,17 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://vfvh55drthvb"]
+[gd_scene load_steps=8 format=3 uid="uid://vfvh55drthvb"]
 
 [ext_resource type="Script" uid="uid://e4k4xfcve56q" path="res://objects/in_field/treasure.gd" id="1_wkswv"]
 [ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="2_anhvw"]
-[ext_resource type="Script" uid="uid://dreu4tk4en3i5" path="res://objects/player/body/blicking_light.gd" id="3_wxbp0"]
 [ext_resource type="Script" uid="uid://bjxd5dhoyulj0" path="res://objects/in_field/rotating.gd" id="4_2nc1o"]
 [ext_resource type="Texture2D" uid="uid://drwtuitutdqky" path="res://raw_assets/sprites/circle_dashed.png" id="4_e0yoc"]
 
-[sub_resource type="Gradient" id="Gradient_b5nef"]
+[sub_resource type="Gradient" id="Gradient_2nc1o"]
 offsets = PackedFloat32Array(0, 0.64666665)
 colors = PackedColorArray(0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_2nc1o"]
-gradient = SubResource("Gradient_b5nef")
+gradient = SubResource("Gradient_2nc1o")
 width = 256
 height = 256
 fill = 1
@@ -43,8 +42,6 @@ shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.8)
 texture = SubResource("GradientTexture2D_2nc1o")
 texture_scale = 9.0
-script = ExtResource("3_wxbp0")
-metadata/_custom_type_script = "uid://dreu4tk4en3i5"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

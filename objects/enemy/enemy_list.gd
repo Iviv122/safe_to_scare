@@ -3,12 +3,23 @@ class_name EnemyList
 
 var list : Array[PackedScene]
 
-func _init() -> void:
+static func get_list() -> Array[PackedScene]:
+	var items: Array[PackedScene]
 
-	var path = "res://assets/prefabs/enemies/"
-	var enemies = DirAccess.open(path).get_files()
-	
-	for i in enemies:
-		list.append(load(path + i))
+	var path = 'res://assets/prefabs/enemies/'
+	var dir = DirAccess.open(path)
 
-	print("loaded enemies")
+	for i in dir.get_files():
+
+		if not (i.ends_with(".tscn") or i.ends_with(".scn")):
+			continue
+		if i.ends_with(".tscn.remap") or i.ends_with(".scn.remap"):
+			continue
+
+		var file_path = path + i
+		var loaded = load(file_path)
+		items.append(loaded)
+
+	print("enemies loaded")
+
+	return items
