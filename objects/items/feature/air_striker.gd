@@ -12,6 +12,9 @@ func _ready():
     time = every_x_seconds
 
 func _process(delta):
+    if GameState.State.Selecting == GameStateInstance.state:
+        return
+
     time -= delta
     if time <= 0:
         shoot() 
@@ -20,7 +23,7 @@ func _process(delta):
 func shoot() -> void:
     var instance : AirStrike= air_strike.instantiate()
 
-    var r = randf_range(-spawn_radius,spawn_radius)
-    instance.global_position = Vector2(sin(r),cos(r))*spawn_radius
+    var r = randf_range(0,spawn_radius)
+    instance.global_position = Vector2(sin(r),cos(r))*r
 
     get_tree().current_scene.add_child(instance)

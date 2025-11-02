@@ -31,6 +31,9 @@ func explode() -> void:
 		get_tree().current_scene.add_child(b)
 
 func _process(delta):
+	if GameState.State.Selecting == GameStateInstance.state:
+			return
+
 	time += delta
 
 	if time >= time_to_explode:

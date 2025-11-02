@@ -3,6 +3,26 @@ class_name ItemsList
 
 @export var list: Array[Item]
 
+var queue : Array[Item]
+
+func _init():
+	list = get_list()
+
+
+func shuffle() -> void:
+	queue.clear()
+	for i in list:
+		queue.append(i)
+	queue.shuffle()
+
+
+func get_item() -> Item:
+	if queue.size() == 0 || list.size()-queue.size() >= 3:
+		shuffle()
+	
+	return queue.pop_back()
+	return list.pop_back()
+
 
 static func get_list() -> Array[Item]:
 	var items: Array[Item]

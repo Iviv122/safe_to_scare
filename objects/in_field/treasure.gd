@@ -8,7 +8,6 @@ var is_filling : int = 0
 var time :float= 0
 
 func _ready():
-	ItemsList.get_list()
 
 	progress.min_value = 0
 	progress.max_value = time_to_fill
