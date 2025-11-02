@@ -6,11 +6,14 @@ class_name EnemySpawner
 
 @export var spawn_radius : float = 1500
 
+@export var myself_node : EnemySpawnerNode
+
 var enemy_stats : Array[EnemyStats]
 var timer :float = 1
 
 func _ready():
 	enemy_stats = EnemyParser.load_enemies_from_file()
+	myself_node.node = self
 
 func spawn() -> void:
 

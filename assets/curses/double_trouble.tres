@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DoubleTrouble" load_steps=2 format=3 uid="uid://c8lqtgfhoxg3r"]
+
+[ext_resource type="Script" uid="uid://ywjjjdoiq7en" path="res://objects/curses/implementations/double_trouble.gd" id="1_0irrs"]
+
+[resource]
+script = ExtResource("1_0irrs")
+desc = "Double trouble"
+metadata/_custom_type_script = "uid://ywjjjdoiq7en"

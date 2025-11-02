@@ -191,14 +191,12 @@ screen = NodePath("../..")
 metadata/_custom_type_script = "uid://dkbsbh15eyff6"
 
 [node name="HealTint" type="Sprite2D" parent="."]
-visible = false
 self_modulate = Color(0, 1, 0, 1)
 scale = Vector2(15, 15)
 texture = ExtResource("9_cp3yg")
 script = ExtResource("10_6psqx")
 
 [node name="DamageTint" type="Sprite2D" parent="."]
-visible = false
 self_modulate = Color(1, 0, 0, 1)
 scale = Vector2(15, 15)
 texture = ExtResource("9_cp3yg")
