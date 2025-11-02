@@ -21,7 +21,6 @@ func get_item() -> Item:
 		shuffle()
 	
 	return queue.pop_back()
-	return list.pop_back()
 
 
 static func get_list() -> Array[Item]:

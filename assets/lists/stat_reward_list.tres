@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="StatRewardList" load_steps=3 format=3 uid="uid://c4ahjx70t3r2m"]
+
+[ext_resource type="Script" uid="uid://8kyitxpgso1j" path="res://objects/reward_selector/stat_reward.gd" id="1_ndspn"]
+[ext_resource type="Script" uid="uid://dwjoimwbaxli2" path="res://objects/reward_selector/stat_list.gd" id="2_mdtce"]
+
+[resource]
+script = ExtResource("2_mdtce")
+metadata/_custom_type_script = "uid://dwjoimwbaxli2"

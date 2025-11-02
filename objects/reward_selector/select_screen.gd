@@ -1,7 +1,7 @@
 extends CanvasLayer
 class_name SelectScreen
 
-var stats_list : Array[StatReward]
+@export var stats_list : StatRewardList 
 @export var item_list : ItemsList 
 
 @export var tutor_label : TutorialLabel
@@ -11,8 +11,6 @@ var stats_list : Array[StatReward]
 
 func _ready():
 	
-	stats_list = StatRewardParser.load_stat_rewards_from_file()	
-
 	hide()
 
 	add_to_group("curse_reward")
@@ -60,7 +58,7 @@ func select_stat() -> void:
 	for i in range(0,3):
 		var b = SelectStat.new()
 
-		b.stat =  stats_list.pick_random()
+		b.stat =  stats_list.get_item()
 		b.custom_minimum_size = Vector2(300,300)
 		b.text = b.stat._to_string()
 		b.pressed.connect(disappear)

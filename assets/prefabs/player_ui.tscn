@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cuf6ygvr2uxvy"]
+[gd_scene load_steps=18 format=3 uid="uid://cuf6ygvr2uxvy"]
 
 [ext_resource type="Script" uid="uid://eungeq374kpr" path="res://objects/player/ui/health_bar.gd" id="1_fdptt"]
 [ext_resource type="Script" uid="uid://bo66ueilcmsbp" path="res://objects/player/ui/xp_bar.gd" id="2_8fjfj"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bp40a4n53ytv4" path="res://objects/reward_selector/select_screen.gd" id="5_mq1e0"]
 [ext_resource type="Script" uid="uid://dkbsbh15eyff6" path="res://objects/reward_selector/skip.gd" id="6_b6pqp"]
 [ext_resource type="Resource" uid="uid://cappu71txfvio" path="res://assets/lists/item_list.tres" id="6_fhscv"]
+[ext_resource type="Resource" uid="uid://c4ahjx70t3r2m" path="res://assets/lists/stat_reward_list.tres" id="6_ph2sl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fjfj"]
 
@@ -85,6 +86,7 @@ metadata/_custom_type_script = "uid://bhiv2rge54nt0"
 
 [node name="SelectScreen" type="CanvasLayer" parent="." node_paths=PackedStringArray("tutor_label", "skip_button", "where_to_add")]
 script = ExtResource("5_mq1e0")
+stats_list = ExtResource("6_ph2sl")
 item_list = ExtResource("6_fhscv")
 tutor_label = NodePath("../TutorialLabel")
 skip_button = NodePath("Panel/SkipButton")
