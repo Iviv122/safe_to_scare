@@ -3,11 +3,13 @@ class_name SelectScreen
 
 @export var stats_list : StatRewardList 
 @export var item_list : ItemsList 
+@export var curse_list : CurseList 
 
 @export var tutor_label : TutorialLabel
 @export var skip_button : Button
-
 @export var where_to_add : Control
+
+@export var reward_label : RichTextLabel
 
 func _ready():
 	
@@ -32,10 +34,22 @@ func appear() -> void:
 func curse_reward() -> void:
 	skip_button.hide()
 	appear()
+	reward_label.text = "[shake rate=20.0 level=5 connected=1]Choose your curse![/shake]"
 
+	for i in range(0,3):
+		var b = SelectCurse.new()
+		
+		b.curse = curse_list.get_item()
+		b.custom_minimum_size = Vector2(300,300)
+		b.text = b.curse._to_string()
+		b.pressed.connect(disappear)
+		where_to_add.add_child(b)
+
+	
 func item_reward() -> void:
 	skip_button.show()
 	appear()
+	reward_label.text = "[tornado radius=3.0 freq=3.0]Choose your reward![/tornado]"
 	for i in range(0,3):
 		var b = SelectItem.new()
 
@@ -54,7 +68,7 @@ func disappear() -> void:
 func select_stat() -> void:
 	skip_button.show()	
 	appear()
-	
+	reward_label.text = "[tornado radius=3.0 freq=3.0]Choose your reward![/tornado]"
 	for i in range(0,3):
 		var b = SelectStat.new()
 

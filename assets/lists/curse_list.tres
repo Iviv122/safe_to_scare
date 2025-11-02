@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CurseList" load_steps=3 format=3 uid="uid://c1kn7swfx3r8a"]
+
+[ext_resource type="Script" uid="uid://md8vjfmbmuty" path="res://objects/curses/curse.gd" id="1_uxnee"]
+[ext_resource type="Script" uid="uid://dk3puuwwspbfl" path="res://objects/curses/curse_list.gd" id="2_0kf0s"]
+
+[resource]
+script = ExtResource("2_0kf0s")
+metadata/_custom_type_script = "uid://dk3puuwwspbfl"

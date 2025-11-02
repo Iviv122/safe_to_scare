@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Curse" load_steps=2 format=3 uid="uid://iikuolm1swqa"]
+
+[ext_resource type="Script" uid="uid://md8vjfmbmuty" path="res://objects/curses/curse.gd" id="1_q7bej"]
+
+[resource]
+script = ExtResource("1_q7bej")
+desc = "sample"
+metadata/_custom_type_script = "uid://md8vjfmbmuty"
