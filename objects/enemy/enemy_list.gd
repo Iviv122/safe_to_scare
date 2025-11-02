@@ -1,25 +1,25 @@
 extends Resource
 class_name EnemyList 
 
-var list : Array[PackedScene]
+@export var list : Array[PackedScene]
 
-static func get_list() -> Array[PackedScene]:
-	var items: Array[PackedScene]
-
+func _init():
 	var path = 'res://assets/prefabs/enemies/'
 	var dir = DirAccess.open(path)
 
 	for i in dir.get_files():
-
-		if not (i.ends_with(".tscn") or i.ends_with(".scn")):
-			continue
-		if i.ends_with(".tscn.remap") or i.ends_with(".scn.remap"):
-			continue
-
 		var file_path = path + i
+
+		if (file_path.get_extension() == "remap"):
+			file_path = file_path.replace('.remap', '')
+
 		var loaded = load(file_path)
-		items.append(loaded)
+		if !list.has(loaded):
+			list.append(loaded)
+			print(file_path)
 
-	print("enemies loaded")
+	for i in list:
+		print(i.resource_name)
 
-	return items
+func get_enemy() -> PackedScene:
+	return list.pick_random()
