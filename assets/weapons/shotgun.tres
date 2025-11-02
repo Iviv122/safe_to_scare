@@ -5,4 +5,5 @@
 
 [resource]
 script = ExtResource("2_15uhs")
+name = "shotgun"
 projectile = ExtResource("1_15uhs")

@@ -2,6 +2,7 @@ extends Resource
 class_name Weapon
 
 # time/reload_time
+@export var name : String
 @export var reload_time : float = 1
 @export var projectile : PackedScene
 

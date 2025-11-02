@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GiveWeapon" load_steps=6 format=3 uid="uid://br0cvwc14get7"]
+
+[ext_resource type="Script" uid="uid://bvrf2rrxafb6m" path="res://objects/weapons/weapon.gd" id="1_xv4d3"]
+[ext_resource type="Script" uid="uid://4mvgc6vik8x5" path="res://objects/items/item/give_weapon.gd" id="2_byqr0"]
+[ext_resource type="Resource" uid="uid://cjtshx4eqbmxg" path="res://assets/weapons/pistol.tres" id="2_qg2xi"]
+[ext_resource type="Resource" uid="uid://c3jf3etdvvtiq" path="res://assets/weapons/shotgun.tres" id="3_eapri"]
+[ext_resource type="Resource" uid="uid://bciupennl7ox7" path="res://assets/weapons/grenade_launcher.tres" id="4_gxk62"]
+
+[resource]
+script = ExtResource("2_byqr0")
+list = Array[ExtResource("1_xv4d3")]([ExtResource("2_qg2xi"), ExtResource("3_eapri"), ExtResource("4_gxk62")])

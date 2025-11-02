@@ -6,6 +6,10 @@ class_name Inventory
 
 var reload : float = 0 
 
+func give_weapon(n_weapon : Weapon) -> void:
+	weapon = n_weapon
+	reload =0
+
 func shoot() -> void:
 	if reload <= 0:
 		weapon.shoot(player_node.player_node)

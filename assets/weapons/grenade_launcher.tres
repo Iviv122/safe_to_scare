@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("2_20uk7")
+name = "grenade launcher"
 reload_time = 2.0
 projectile = ExtResource("1_bhu83")
 metadata/_custom_type_script = "uid://bvrf2rrxafb6m"
