@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="DoubleTrouble" load_steps=2 format=3 uid="uid://c8lqtgfhoxg3r"]
+[gd_resource type="Resource" script_class="DoubleTrouble" load_steps=3 format=3 uid="uid://c8lqtgfhoxg3r"]
 
-[ext_resource type="Script" uid="uid://ywjjjdoiq7en" path="res://objects/curses/implementations/double_trouble.gd" id="1_0irrs"]
+[ext_resource type="Script" uid="uid://7ielysphvai6" path="res://objects/curses/names/double_trouble.gd" id="1_0irrs"]
+[ext_resource type="Resource" uid="uid://dojhh1ow1dukx" path="res://assets/globals/spawner_node.tres" id="2_yvv7m"]
 
 [resource]
 script = ExtResource("1_0irrs")
 desc = "Double trouble"
-metadata/_custom_type_script = "uid://ywjjjdoiq7en"
+metadata/_custom_type_script = "uid://7ielysphvai6"

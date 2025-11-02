@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EnemyDeliveryCurse" load_steps=2 format=3 uid="uid://b6qmrhlueyx22"]
+
+[ext_resource type="Script" uid="uid://bsiqdmquadfgd" path="res://objects/curses/names/enemy_delivery_curse.gd" id="1_21g20"]
+
+[resource]
+script = ExtResource("1_21g20")
+desc = "Enemy deliver every 3 seconds"
+metadata/_custom_type_script = "uid://bsiqdmquadfgd"

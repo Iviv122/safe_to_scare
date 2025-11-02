@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlc1sbj2ij111"]
+
+[ext_resource type="Texture2D" uid="uid://bwb0krut0npvl" path="res://raw_assets/sprites/Circle.png" id="1_gepjb"]
+[ext_resource type="Script" uid="uid://btmlb1s8vri55" path="res://objects/curses/implementations/enemy_delivery.gd" id="2_dw2lw"]
+[ext_resource type="PackedScene" uid="uid://ptuwjjdy4ltn" path="res://assets/prefabs/particles/explosion_effect.tscn" id="2_gepjb"]
+[ext_resource type="Resource" uid="uid://dojhh1ow1dukx" path="res://assets/globals/spawner_node.tres" id="3_tuvfo"]
+
+[sub_resource type="Gradient" id="Gradient_b5nef"]
+offsets = PackedFloat32Array(0, 0.64666665)
+colors = PackedColorArray(0.72164947, 0.72164947, 0.72164947, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oh046"]
+gradient = SubResource("Gradient_b5nef")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Node2D" type="Sprite2D"]
+physics_interpolation_mode = 2
+self_modulate = Color(3.2359245, 0.16519342, 2.2328362, 0.39607844)
+z_index = -1
+texture = ExtResource("1_gepjb")
+script = ExtResource("2_dw2lw")
+explode_effect = ExtResource("2_gepjb")
+spawner = ExtResource("3_tuvfo")
+metadata/_custom_type_script = "uid://btmlb1s8vri55"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.3, 0.3)
+energy = 2.5
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.8)
+texture = SubResource("GradientTexture2D_oh046")
+texture_scale = 9.0
+
+[node name="ExplosionParticles" parent="." instance=ExtResource("2_gepjb")]
+position = Vector2(112, 297)

@@ -15,6 +15,15 @@ func _ready():
 	enemy_stats = EnemyParser.load_enemies_from_file()
 	myself_node.node = self
 
+func spawn_pos(pos : Vector2) -> void:
+	var e : Enemy = enemy_list.get_enemy().instantiate()
+
+	e.global_position = pos
+	e.insert_stats(enemy_stats.pick_random().duplicate())
+
+	add_child(e)  
+
+
 func spawn() -> void:
 
 	var rand = randf_range(-3,3)
