@@ -29,10 +29,6 @@ window/size/resizable=false
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
-[editor]
-
-movie_writer/disable_vsync=true
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
@@ -41,6 +37,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 item_reward=""
 curse_reward=""
+restart="restart"
 
 [gui]
 

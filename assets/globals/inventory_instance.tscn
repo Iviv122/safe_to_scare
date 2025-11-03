@@ -6,6 +6,7 @@
 
 [node name="InventoryInstance" type="Node"]
 script = ExtResource("1_61k8r")
+starter_weapon = ExtResource("2_uib4w")
 weapon = ExtResource("2_uib4w")
 player_node = ExtResource("3_uib4w")
 metadata/_custom_type_script = "uid://daygoe25gqhhq"

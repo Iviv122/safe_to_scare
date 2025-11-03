@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_r6yop")
+name = "pistol"
 reload_time = 0.5
 projectile = ExtResource("1_xh3f6")
 metadata/_custom_type_script = "uid://bvrf2rrxafb6m"

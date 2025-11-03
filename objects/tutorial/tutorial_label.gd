@@ -12,6 +12,7 @@ func _ready():
 		j.updated.connect(update)
 		j.all_done.connect(next)
 	update()
+	Engine.time_scale = 1
 
 func end_tutor() -> void:
 	tutor_ended.emit()	

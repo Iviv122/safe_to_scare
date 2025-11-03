@@ -22,6 +22,18 @@ signal healed()
 signal died()
 signal lvl_up()
 
+func restart() -> void:
+    max_health= 3
+    health = 3 
+    speed = 450 
+
+    damage= 1 
+    reload_speed = 1
+
+    level= 1 
+    expirience = 0
+    expirience_req = 10
+
 func add_stats(stats : StatReward) ->void:
     max_health += stats.max_health
     speed += stats.speed
@@ -33,6 +45,8 @@ func add_stats(stats : StatReward) ->void:
     updated.emit()
 
 func _ready():
+
+    add_to_group("restart")
     heal()
 
 func heal() -> void:

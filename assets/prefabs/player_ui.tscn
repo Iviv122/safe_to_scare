@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cuf6ygvr2uxvy"]
+[gd_scene load_steps=27 format=3 uid="uid://cuf6ygvr2uxvy"]
 
 [ext_resource type="Script" uid="uid://eungeq374kpr" path="res://objects/player/ui/health_bar.gd" id="1_fdptt"]
 [ext_resource type="Script" uid="uid://bo66ueilcmsbp" path="res://objects/player/ui/xp_bar.gd" id="2_8fjfj"]
@@ -13,6 +13,8 @@
 [ext_resource type="Resource" uid="uid://c1kn7swfx3r8a" path="res://assets/lists/curse_list.tres" id="9_lthwf"]
 [ext_resource type="Script" uid="uid://cdanv3wy5upbb" path="res://objects/player/ui/healed.gd" id="10_6psqx"]
 [ext_resource type="Script" uid="uid://0akkll0gnbq7" path="res://objects/curses/curse_meter.gd" id="12_1hkff"]
+[ext_resource type="Script" uid="uid://vevuwn0q4vfm" path="res://objects/death_screen/death_layer.gd" id="14_0g1wc"]
+[ext_resource type="Script" uid="uid://bremempgl3x74" path="res://objects/death_screen/restarter.gd" id="15_3wnsf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1hkff"]
 
@@ -202,3 +204,23 @@ scale = Vector2(15, 15)
 texture = ExtResource("9_cp3yg")
 script = ExtResource("9_6u2vk")
 metadata/_custom_type_script = "uid://so4djlyl7y8g"
+
+[node name="DeathLayer" type="CanvasLayer" parent="."]
+script = ExtResource("14_0g1wc")
+metadata/_custom_type_script = "uid://vevuwn0q4vfm"
+
+[node name="Restarter" type="Button" parent="DeathLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -12.0
+offset_right = 68.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Restart"
+script = ExtResource("15_3wnsf")
+metadata/_custom_type_script = "uid://bremempgl3x74"

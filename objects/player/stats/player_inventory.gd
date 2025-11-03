@@ -1,10 +1,17 @@
 extends Node
 class_name Inventory
 
+@export var starter_weapon : Weapon
 @export var weapon : Weapon
 @export var player_node : PlayerNode
 
 var reload : float = 0 
+
+func _ready():
+	add_to_group("restart")
+
+func restart() -> void:
+	weapon = starter_weapon
 
 func give_weapon(n_weapon : Weapon) -> void:
 	weapon = n_weapon
